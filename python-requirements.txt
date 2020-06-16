@@ -1,1 +1,1 @@
-fusesoc
+git+https://github.com/olofk/fusesoc@master

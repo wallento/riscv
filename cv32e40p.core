@@ -6,9 +6,25 @@ description: "CV32E40P is an in-order 4-stage RISC-V RV32IMFCXpulp CPU based on 
 
 filesets:
   files_rtl:
-    depend:
-      - pulp-platform.org::fpnew
+# First need this upstream
+#    depend:
+#      - pulp-platform.org::fpnew
     files:
+# Temporarily added until fpnew is upstream
+      - rtl/fpnew/src/common_cells/include/common_cells/registers.svh: { is_include_file: true, include_path: "rtl/fpnew/src/common_cells/include" }
+      - rtl/fpnew/src/fpnew_pkg.sv
+      - rtl/fpnew/src/fpnew_cast_multi.sv
+      - rtl/fpnew/src/fpnew_classifier.sv
+      - rtl/fpnew/src/fpnew_divsqrt_multi.sv
+      - rtl/fpnew/src/fpnew_fma.sv
+      - rtl/fpnew/src/fpnew_fma_multi.sv
+      - rtl/fpnew/src/fpnew_noncomp.sv
+      - rtl/fpnew/src/fpnew_opgroup_block.sv
+      - rtl/fpnew/src/fpnew_opgroup_fmt_slice.sv
+      - rtl/fpnew/src/fpnew_opgroup_multifmt_slice.sv
+      - rtl/fpnew/src/fpnew_rounding.sv
+      - rtl/fpnew/src/fpnew_top.sv
+# /Temporarily added until fpnew is upstream
       - rtl/include/apu_macros.sv: {is_include_file: true}
       - rtl/include/riscv_config.sv: {is_include_file: true}
       - rtl/include/apu_core_package.sv
